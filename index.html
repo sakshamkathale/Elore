@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="Website icon" typr="png" href="elor logo.png">
+  <meta charset="UTF-8">
+  <title>Elore</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+   
+   
+    body {
+     
+      background-attachment: fixed;
+      background-color: black;
+      color: white;
+     
+    }
+    .center-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+    }
+    .center-img:last-child {
+      margin-bottom: 0;
+    }
+    .signup-btn {
+      display: block;
+      margin: 40px auto 0 auto;
+      background-color: #444f47;
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    .signup-btn:hover {
+      background-color: #bcbdc5;
+    }
+    .center-img.img5 {
+      margin-top: 100px;
+    }
+    .alt-shape {
+      border-radius: 20px 0 20px 0;
+    }
+    .gallery-container {
+      position: relative;
+      width: 350px;
+      margin: 60px auto 0 auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      min-height: 500px;
+    }
+    .gallery-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      width: 350px;
+      height: 500px;
+      pointer-events: none;
+    }
+    .gallery-img {
+      position: absolute;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+    .img1 { top: 0; left: 0; width: 10px; height: 90px; z-index: 2; }
+    .img2 { top: 0; right: 0; width: 110px; height: 90px; z-index: 2; }
+    .img3 { top: 80px; left: 20px; width: 120px; height: 80px; z-index: 3; }
+    .img4 { top: 80px; right: 20px; width: 120px; height: 80px; z-index: 3; }
+    .img5 { top: 170px; left: 60px; width: 230px; height: 120px; z-index: 4; }
+    .img6 { top: 320px; left: 0; width: 120px; height: 90px; z-index: 2; }
+    .img7 { top: 340px; right: 0; width: 120px; height: 80px; z-index: 2; }
+    .gallery-quote {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      color: #232323;
+      background: rgba(223, 217, 217, 0.646);
+      font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 50px 50px !important;
+      border-radius: 18px;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      margin-top: 1px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+      margin: 0 10px;
+    }
+    .social-btn img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+    .social-btn span {
+      margin-top: 0;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .email-form-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 40px auto 30px auto;
+      display: flex;
+      justify-content: center;
+    }
+    .email-form {
+      display: flex;
+      width: 100%;
+      gap: 18px;
+    }
+    .email-input.alt-shape-left {
+      flex: 1;
+      padding: 14px 18px;
+      border: none;
+      font-size: 1.2em;
+      background: #d6d6d6;
+      color: #232323;
+      outline: none;
+      border-radius: 24px 0 24px 0;
+    }
+    .email-input::placeholder {
+      color: #888;
+      opacity: 1;
+    }
+    .send-btn.alt-shape-right {
+      padding: 0 28px;
+      border: none;
+      background: #444f47;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.2s;
+      border-radius: 0 24px 0 24px;
+      min-width: 100px;
+    }
+    .send-btn.alt-shape-right:hover {
+      background: #232323;
+    }
+  </style>
+</head>
+<style>
+  .background-video {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100vw;
+    left: 0;
+    min-width: 100vw;
+    min-height: 95vh;
+    width: 30vw;
+    /* Parallax effect: move video up as you scroll down */
+    transform: translateY(calc(-1 * var(--scroll, 0px)));
+    height: 5vh;
+    object-fit: auto;
+    object-position: center;
+    z-index: -1;
+    /* pointer-events: none; */
+    
+
+  }
+</style>
+<video class="background-video" autoplay muted loop playsinline>
+  <source src="background.mp4" type="video/mp4">
+  </video>
+<body>
+  <img src="Welcom.png" alt="Image 1" class="center-img" style="width:200px; height:30px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="Elorr.png" alt="Image 2" class="center-img" style="width:400px; height:150px; right: 50px;">
+  <img src="ss.png" alt="Image 3" class="center-img" style="width:400px; height:50px;">
+  <img src="fg.png" alt="Image 4" class="center-img" style="width:400px; height:50px;">
+  <img src="gyjgyj.png" alt="Image 5" class="center-img" style="width:700px; height:100px;">
+  <img src="fsv.png" alt="Image 6" class="center-img" style="width:800px; height:200px;">
+  <img src="thtfh.png" alt="Image 7" class="center-img" style="width:300px; height:30px;">
+  <button class="signup-btn alt-shape" onclick="window.location.href='login.html'">Sign up</button>
+  <img src="Our story.png" alt="Image 8" class="center-img" style="width:800px; height:800px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="What we stand for.png" alt="Image 9" class="center-img" style="width:700px; height:1000px;">
+
+  <div class="gallery-container">
+    <img src="elor logo.png" class="gallery-img img7" alt="">
+    <img src="1.jpeg" class="gallery-img img1" alt="">
+    <img src="2.jpeg" class="gallery-img img2" alt="">
+    <img src="3.jpg" class="gallery-img img3" alt="">
+    <img src="4.jpg" class="gallery-img img4" alt="">
+    <img src="6.jpg" class="gallery-img img6" alt="">
+    <div class="gallery-quote">
+      "Designed to be worn.<br>Destined to be remembered"
+    </div>
+  </div>
+
+  <script>
+    // Add the img5 class to the 5th image
+    document.querySelectorAll('.center-img')[4].classList.add('img5');
+    function sendEmail(event) {
+      event.preventDefault();
+      const email = document.querySelector('.email-input').value;
+      if(email) {
+        alert('Email sent: ' + email);
+        document.querySelector('.email-input').value = '';
+      }
+    }
+  </script>
+
+  <img src="Follow us.png" alt="img 10" class="center-img" style="width:400px; height:60px; margin-top: 100px; margin-bottom: 100px;">
+  <div class="social-links">
+    <a href="https://facebook.com" target="_blank" class="social-btn">
+      <img src="Facebook logo.png" alt="Facebook" width="50" height="50">
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/elorelifestyleco?igsh=d2I0d25tZmdnMXF4" target="_blank" class="social-btn">
+      <img src="instagram.png" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="social-btn">
+      <img src="linkedin.png" alt="Linkedin">
+      <span>Linkedin</span>
+    </a>
+    <a href="https://pinterest.com" target="_blank" class="social-btn">
+      <img src="pinterest.png" alt="Pinterest">
+      <span>Pinterest</span>
+    </a>
+  </div>
+
+  <img src="elor official.png" alt="Image 11" class="center-img" style="width:400px; height:60px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="stay connected.png" alt="Image 12" class="center-img" style="width:950px; height:300px; margin-top: 100px; margin-bottom: 100px;">
+
+  <div class="email-form-container">
+    <form class="email-form" onsubmit="sendEmail(event)">
+      <input type="email" class="email-input alt-shape-left" placeholder="Enter your email" required>
+      <button type="submit" class="send-btn alt-shape-right">Send</button>
+    </form>
+  </div>
+
+  <img src="all rights.png" alt="Image 13" class="center-img" style="width:600px; height:40px; margin-top: 100px; margin-bottom: 100px;">
+</body>
+</html>
