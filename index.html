@@ -182,7 +182,16 @@
     z-index: -1;
     /* pointer-events: none; */
     border-top: 1px;
-
+  }
+   @media (max-width: 600px) {
+    .background-video {
+      width: 100vw;
+      height: 100vh;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 </style>
 <video class="background-video" autoplay muted loop playsinline>
