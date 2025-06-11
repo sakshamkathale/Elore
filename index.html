@@ -165,25 +165,21 @@
 </head>
 <style>
   .background-video {
-    position: absolute ;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100px;
     width: 100vw;
-    left: 0;
+    height: 100vh;
     min-width: 100vw;
-    min-height: 95vh;
-    width: 30vw;
-    /* Parallax effect: move video up as you scroll down */
-    transform: translateY(calc(-1 * var(--scroll, 0px)));
-    height: 5vh;
-    object-fit: auto;
+    min-height: 100vh;
+    object-fit: cover;
     object-position: center;
     z-index: -1;
-    /* pointer-events: none; */
-    border-top: 1px;
+    transform: translateY(calc(-1 * var(--scroll, 0px)));
+    pointer-events: none;
+    margin-bottom: auto;
   }
-   @media (max-width: 600px) {
+  @media (max-width: 600px) {
     .background-video {
       width: 100vw;
       height: 100vh;
@@ -192,11 +188,32 @@
       object-fit: cover;
       object-position: center;
     }
+    .center-img,
+    .gallery-container,
+    .email-form-container {
+      max-width: 98vw !important;
+      width: 98vw !important;
+    }
+    .center-img {
+      height: auto !important;
+      max-width: 98vw !important;
+    }
+  }
+
+  .background-video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
   }
 </style>
 <video class="background-video" autoplay muted loop playsinline>
-  <source src="Background.mp4" type="video/mp4">
-  </video>
+  <source src="background.mp4" type="video/mp4">
+</video>
 <body>
   <img src="Welcom.png" alt="Image 1" class="center-img" style="width:200px; height:30px; margin-top: 100px; margin-bottom: 100px;">
   <img src="Elorr.png" alt="Image 2" class="center-img" style="width:400px; height:150px; right: 50px;">
