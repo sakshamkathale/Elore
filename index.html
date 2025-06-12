@@ -1,44 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="Website icon" type="png" href="elor logo.png">
+  <link rel="Website icon" typr="png" href="elor logo.png">
   <meta charset="UTF-8">
   <title>Elore</title>
   <link rel="stylesheet" href="index.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+   
+   
     body {
+     
+      background-attachment: fixed;
       background-color: black;
       color: white;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    .background-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      left: 50%;
-      transform: translateX(-50%);
-      min-width: 100vw;
-      min-height: 100vh;
-      object-fit: cover;
-      object-position: center;
-      z-index: -1;
-      pointer-events: none;
-      margin-top: -100px; 
+     
     }
     .center-img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 80px;
-      max-width: 90vw;
-      height: auto;
     }
     .center-img:last-child {
       margin-bottom: 0;
@@ -72,7 +53,6 @@
       padding-top: 40px;
       padding-bottom: 40px;
       min-height: 500px;
-      max-width: 95vw;
     }
     .gallery-bg {
       position: absolute;
@@ -89,10 +69,8 @@
       border-radius: 18px;
       object-fit: cover;
       box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-      max-width: 100%;
-      height: auto;
     }
-    .img1 { top: 0; left: 0; width: 110px; height: 90px; z-index: 2; }
+    .img1 { top: 0; left: 0; width: 10px; height: 90px; z-index: 2; }
     .img2 { top: 0; right: 0; width: 110px; height: 90px; z-index: 2; }
     .img3 { top: 80px; left: 20px; width: 120px; height: 80px; z-index: 3; }
     .img4 { top: 80px; right: 20px; width: 120px; height: 80px; z-index: 3; }
@@ -183,56 +161,37 @@
     .send-btn.alt-shape-right:hover {
       background: #232323;
     }
-    @media (max-width: 600px) {
-      .gallery-container {
-        width: 98vw;
-        min-height: 300px;
-      }
-      .gallery-bg {
-        width: 98vw;
-        height: 300px;
-      }
+</style>
+</head>
+<style>
+  .Background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .Background-video {
+      min-width: 100vw;
+      min-height: 100vh;
+      width: 100vw;
+      height: 80vh;
     }
-    @media (max-width: 600px) {
-      .background-video {
-        width: 100vw;
-        height: 100vh;
-        min-width: 100vw;
-        min-height: 100vh;
-        position: absolute;
-      }
-      .center-img {
-        max-width: 98vw;
-        height: auto !important;
-        margin-bottom: 40px;
-      }
-      .gallery-container {
-        width: 98vw;
-        min-height: 200px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      .gallery-bg {
-        width: 98vw;
-        height: 200px;
-      }
-      .gallery-quote {
-        font-size: 1em;
-        padding: 20px 10px !important;
-      }
-      .email-form-container {
-        max-width: 98vw;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <!-- Background video as first element in body -->
-  <video class="background-video" autoplay muted loop playsinline>
+  <video class="Background-video" autoplay muted loop playsinline>
     <source src="Background.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
+<body>
   <img src="Welcom.png" alt="Image 1" class="center-img" style="width:200px; height:30px; margin-top: 100px; margin-bottom: 100px;">
   <img src="Elorr.png" alt="Image 2" class="center-img" style="width:400px; height:150px; right: 50px;">
   <img src="ss.png" alt="Image 3" class="center-img" style="width:400px; height:50px;">
@@ -290,7 +249,7 @@
   </div>
 
   <img src="elor official.png" alt="Image 11" class="center-img" style="width:400px; height:60px; margin-top: 100px; margin-bottom: 100px;">
-  <img src="stay connected.png" alt="Image 12" class="center-img" style="width:850px; height:200px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="stay connected.png" alt="Image 12" class="center-img" style="width:950px; height:300px; margin-top: 100px; margin-bottom: 100px;">
 
   <div class="email-form-container">
     <form class="email-form" onsubmit="sendEmail(event)">
