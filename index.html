@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="Website icon" type="png" href="elor logo.png">
+  <meta charset="UTF-8">
+  <title>Elore</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    body {
+      background-attachment: fixed;
+      background-color: black;
+      color: white;
+    }
+    .center-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+    }
+    .center-img:last-child {
+      margin-bottom: 0;
+    }
+    .signup-btn {
+      display: block;
+      margin: 40px auto 0 auto;
+      background-color: #444f47;
+      color: white;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    .signup-btn:hover {
+      background-color: #bcbdc5;
+    }
+    .center-img.img5 {
+      margin-top: 100px;
+    }
+    .alt-shape {
+      border-radius: 20px 0 20px 0;
+    }
+    .gallery-container {
+      position: relative;
+      width: 350px;
+      margin: 60px auto 0 auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      min-height: 500px;
+    }
+    .gallery-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      width: 350px;
+      height: 500px;
+      pointer-events: none;
+    }
+    .gallery-img {
+      position: absolute;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+    .img1 { top: 0; left: 0; width: 10px; height: 90px; z-index: 2; }
+    .img2 { top: 0; right: 0; width: 110px; height: 90px; z-index: 2; }
+    .img3 { top: 80px; left: 20px; width: 120px; height: 80px; z-index: 3; }
+    .img4 { top: 80px; right: 20px; width: 120px; height: 80px; z-index: 3; }
+    .img5 { top: 170px; left: 60px; width: 230px; height: 120px; z-index: 4; }
+    .img6 { top: 320px; left: 0; width: 120px; height: 90px; z-index: 2; }
+    .img7 { top: 340px; right: 0; width: 120px; height: 80px; z-index: 2; }
+    .gallery-quote {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      color: #232323;
+      background: rgba(223, 217, 217, 0.646);
+      font-weight: bold;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 50px 50px !important;
+      border-radius: 18px;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      margin-top: 1px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+      margin: 0 10px;
+    }
+    .social-btn img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+    .social-btn span {
+      margin-top: 0;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .email-form-container {
+      width: 100%;
+      max-width: 500px;
+      margin: 40px auto 30px auto;
+      display: flex;
+      justify-content: center;
+    }
+    .email-form {
+      display: flex;
+      width: 100%;
+      gap: 18px;
+    }
+    .email-input.alt-shape-left {
+      flex: 1;
+      padding: 14px 18px;
+      border: none;
+      font-size: 1.2em;
+      background: #d6d6d6;
+      color: #232323;
+      outline: none;
+      border-radius: 24px 0 24px 0;
+    }
+    .email-input::placeholder {
+      color: #888;
+      opacity: 1;
+    }
+    .send-btn.alt-shape-right {
+      padding: 0 28px;
+      border: none;
+      background: #444f47;
+      color: #fff;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.2s;
+      border-radius: 0 24px 0 24px;
+      min-width: 100px;
+    }
+    .send-btn.alt-shape-right:hover {
+      background: #232323;
+    }
+    .custom-signup-btn:hover {
+      background: #bcbdc5 !important;
+      color: #232323 !important;
+    }
+    .custom-signup-btn:hover span {
+      color: #232323 !important;
+    }
+    @media (max-width: 600px) {
+      .signup-form {
+        max-width: 98vw !important;
+      }
+      .signup-input {
+        font-size: 1.3rem !important;
+        padding: 18px 16px !important;
+        border-radius: 24px !important;
+      }
+      .signup-btn {
+        font-size: 1.2rem !important;
+        padding: 16px 20px !important;
+        border-radius: 24px !important;
+      }
+    }
+    .Background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      min-width: 100vw;
+      min-height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+      pointer-events: none;
+    }
+    @media (max-width: 600px) {
+      .Background-video {
+        width: 100vw;
+        height: 80vh;
+        min-width: 100vw;
+        min-height: 50vh;
+        height: 50vh;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  </style>
+  <style>
+    body {
+      background-attachment: fixed;
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .background-video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .background-video-container video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      min-width: 100vw;
+      min-height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .content-over-video {
+      position: relative;
+      z-index: 1;
+    }
+    .center-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+      position: relative;
+      z-index: 2;
+    }
+    .center-img:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+<body>
+<div class="video-container">
+  <video autoplay muted loop>
+    <source src="Elore bg.mp4" type="video/mp4">
+  </video>
+</div> 
+
+  <img src="Welcom.png" alt="Image 1" class="center-img" style="width:200px; height:30px; margin-top: -850px; margin-bottom: 100px;">
+    <img src="Elorr.png" alt="Image 2" class="center-img" style="width:400px; height:150px; display:block; margin-left:auto; margin-right:auto; position:relative; left:10px; top:850px;">
+
+  <img src="ss.png" alt="Image 3" class="center-img" style="width:400px; height:50px; margin-top: 900px; ">
+  <img src="gyjgyj.png" alt="Image 5" class="center-img" style="width:700px; height:100px; margin-top: 200px">
+  <img src="Step into.png" alt="Image 6" class="center-img" style="width:800px; height:300px; margin-top: -200px; left: 0px; position: relative;">
+  <img src="sign up now.png" alt="Image 7" class="center-img" style="width:800px; height:150px; margin-top: 300px;">
+
+  <!-- Signup Form (no Firebase/Supabase JS) -->
+<div class="signup-form-container">
+  <form class="signup-form" id="signup-form" autocomplete="on">
+  <input
+    type="email"
+    name="email"
+    class="signup-input"
+    id="signup-email"
+    placeholder="Email"
+    required
+    style="width: 60%; height: 60px; margin-bottom: 48px; border-radius: 40px 0 40px 0;"
+  >
+  <input
+    type="tel"
+    name="phone"
+    class="signup-input"
+    id="signup-phone"
+    placeholder="Phone Number (Optional)"
+    style="width: 60%; height: 60px ; margin-bottom: 48px;border-radius: 40px 0 40px 0;"
+  >
+  <button type="submit" class="signup-btn" style="border-radius: 40px 0 40px 0; font-size: 1.8rem;">SIGN ME UP</button>
+</form>
+<!-- Removed duplicate form submit handler to prevent double submission -->
+</div>
+<style>
+  .signup-form-container {
+    max-width: 80vw;
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .signup-form {
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .signup-input {
+    width: 100%;
+    max-width: 900px;
+    background: #e2e2e4;
+    color: #444;
+    border: none;
+    border-radius: 40px;
+    padding: 32px 32px;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    outline: none;
+    text-align: left;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s;
+  }
+  .signup-input::placeholder {
+    color: #b0b0b0;
+    opacity: 1;
+    font-family: inherit;
+  }
+  .signup-btn {
+    background: #38423c;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 24px 60px;
+    font-size: 2.2rem;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s, color 0.2s;
+    width: 320px;
+    text-align: center;
+  }
+  .signup-btn:hover {
+    background: #232b26;
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .signup-form-container {
+      max-width: 98vw;
+    }
+    .signup-form {
+      max-width: 98vw;
+    }
+    .signup-input {
+      font-size: 1.3rem;
+      padding: 18px 16px;
+      border-radius: 24px;
+      margin-bottom: 32px;
+    }
+    .signup-btn {
+      font-size: 1.2rem;
+      padding: 16px 20px;
+      border-radius: 24px;
+      width: 90vw;
+      min-width: 0;
+    }
+  }
+</style>
+
+  <img src="Our story.png" alt="Image 8" class="center-img" style="width:700px; height:1400px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="Heres why.png" alt="Image 9" class="center-img" style="width:700px; height:150px;">
+  <img src="300.png" alt="Image 9" class="center-img" style="width:800px; height:200px;">
+  <img src="Elore care.png" alt="Image 9" class="center-img" style="width:400px; height:60px;">
+  <img src="Style that.png" alt="Image 9" class="center-img" style="width:600px; height:500px;">
+
+  <div class="gallery-container">
+    <img src="elor logo.png" class="gallery-img img7" alt="">
+    <img src="4.jpg" class="gallery-img img1" alt="">
+    <img src="Pta nahi.png" class="gallery-img img2" alt="">
+    <img src="Tan1.png" class="gallery-img img3" alt="">
+    <img src="Model wali.png" class="gallery-img img4" alt="">
+    <img src="white.png" class="gallery-img img6" alt="">
+    <div class="gallery-quote">
+      "Designed to be worn.<br>Destined to be remembered"
+    </div>
+  </div>
+
+  <script>
+    // Add the img5 class to the 5th image
+    document.addEventListener('DOMContentLoaded', function() {
+      var imgs = document.querySelectorAll('.center-img');
+      if(imgs[4]) imgs[4].classList.add('img5');
+    });
+  </script>
+
+  <img src="Join the elore.png" alt="Image 9" class="center-img" style="width:500px; height:200px; margin-top: 150px">
+  <img src="Refer friend.png" alt="Image 9" class="center-img" style="width:500px; height:80px;">
+  <img src="Follow us.png" alt="img 10" class="center-img" style="width:400px; height:60px; margin-top: 100px; margin-bottom: 100px;">
+  <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=61577851531873&sk=about" target="_blank" class="social-btn">
+      <img src="Facebook logo.png" alt="Facebook" width="50" height="50">
+      <span>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/elorelifestyleco?igsh=d2I0d25tZmdnMXF4" target="_blank" class="social-btn">
+      <img src="instagram.png" alt="Instagram">
+      <span>Instagram</span>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="social-btn">
+      <img src="linkedin.png" alt="Linkedin">
+      <span>Linkedin</span>
+    </a>
+    
+  </div>
+  <img src="elor official.png" alt="Image 11" class="center-img" style="width:400px; height:60px; margin-top: 100px; margin-bottom: 100px;">
+  <img src="all rights.png" alt="Image 13" class="center-img" style="width:600px; height:40px; margin-top: 100px; margin-bottom: 100px;">
+
+  <script>
+document.getElementById('signup-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('signup-email').value;
+  const phone = document.getElementById('signup-phone').value;
+  const formData = new FormData();
+  formData.append('email', email);
+  formData.append('phone', phone);
+
+  fetch('https://script.google.com/macros/s/AKfycbylexaH5FMVjTqEtBFGDTzUYJ19v1Y1XVkIDrVxyD9EFfOSixOl106UO1QIGRKkBLcP/exec', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    // Optionally show a message or clear the form
+    alert('Thank you for registering!');
+    document.getElementById('signup-form').reset();
+  })
+  .catch(error => {
+    alert('Error! Please try again.');
+  });
+});
+</script>
+</body>
+</html>
